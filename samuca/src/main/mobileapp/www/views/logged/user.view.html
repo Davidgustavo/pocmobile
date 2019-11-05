@@ -1,0 +1,52 @@
+<ion-view cache-view="false" hide-back-button="true" class="pane"> 
+  <ion-header-bar class="bar bar-header bar-positive" xattr-theme="bar-positive" data-component="crn-ion-header-bar"> 
+    <div side="left" class="buttons buttons-left header-item"> 
+      <button class="button button-clear" ng-if="!User.inserting &amp;&amp; !User.editing" menu-toggle="left" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-navicon"></i> </button> 
+      <button class="button button-clear" ng-if="User.inserting || User.editing" ng-click="User.cancel()" data-component="crn-button" xattr-type="button-clear" xattr-size=""> <i class="icon ion ion-android-arrow-back"></i> </button> 
+    </div> 
+    <h1 class="title"><span ng-show="params.groupId">{{'Label.view.addContact' | translate}}</span><span></span></h1>
+    <div side="right" class="buttons buttons-right header-item"> 
+      <button class="button button-clear" ng-if="!User.inserting &amp;&amp; !User.editing &amp;&amp; !params.groupId" ng-click="User.startInserting()" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-ios-plus-empty"></i> </button> 
+      <button class="button button-clear" ng-if="User.inserting || User.editing" ng-click="User.post()" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-ios-checkmark"></i> </button> 
+    </div> 
+  </ion-header-bar> 
+  <ion-content class="scroll-content has-header" data-component="crn-ion-content"> 
+    <div class="component-holder ng-binding ng-scope ui-draggable ui-draggable-handle" data-component="crn-datasource" id="crn-datasource-906854"> 
+      <datasource name="User" entity="app.query251595" keys="id" rows-per-page="10" delete-message="Deseja remover?" class="" schema="[]" parameters="" condition="{&quot;params&quot;:[{&quot;fieldName&quot;:&quot;groupId&quot;,&quot;fieldValue&quot;:&quot;{{params.groupId|raw}}&quot;},{&quot;fieldName&quot;:&quot;filtro&quot;,&quot;fieldValue&quot;:&quot;{{vars.input9345|raw}}&quot;}],&quot;expression&quot;:{&quot;type&quot;:&quot;AND&quot;,&quot;args&quot;:[]}}" dependent-lazy-post="" lazy="" checkrequired=""></datasource> 
+    </div> 
+    <div crn-datasource="User" class="" ng-hide="User.editing || User.inserting"> 
+      <label class="item item-input component-holder" data-component="crn-input-icon" id="crn-input-icon-548557" crn-datasource="User"><i class="icon ion-search placeholder-icon"></i> <input type="search" placeholder="{{'Label.view.search' | translate}}" ng-model="vars.input9345" mask="" keyboard=""></label>
+      <div class="component-holder ng-binding ng-scope" data-component="crn-list-avatar" id="crn-list-avatar-602194">
+        <div class="" crn-datasource="User" ng-show="session.user.username != rowData.login" ng-repeat="rowData in datasource.data" id="crn-list-avatar5341">
+          <a class="item" xattr-text-position="text-left" data-component="crn-list-item-avatar" id="crn-list-item-avatar-5341" ng-click="">
+            <!--<img data-ng-src="data:image/jpg;base64,{{rowData.picture}}" class="component-holder" data-component="crn-image" id="crn-image-5341">-->
+            <h2 class="dark mt-10" xattr-theme="dark" ng-style="">{{rowData.name}}</h2>
+            <span class="dark mt-10 flag-group" xattr-theme="dark" ng-show="rowData.add">Adicionado</span>
+            <div class="group-actions" crn-datasource="User">
+                <button cronapp-security="visible : Administrators" ng-show="params.groupId &amp;&amp; !rowData.add" ng-click="cronapi.client('js.blockly.Group.Group.addUserGroup').run($event, params.groupId, rowData)" class="action-btn"><i class="component-holder ion ion-android-add-circle" id="crn-icon-328376" style="font-size:300%" xattr-size="font-size:300%" data-component="crn-icon"></i></button>
+                <button cronapp-security="visible : Administrators" ng-show="params.groupId &amp;&amp; rowData.add" ng-click="cronapi.client('js.blockly.Group.Group.removeUserGroup').run($event, params.groupId, rowData)" class="action-btn action-danger"><i class="component-holder ion ion-android-cancel" id="crn-icon-919492" style="font-size:300%" xattr-size="font-size:300%" data-component="crn-icon"></i> </button>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div> 
+    <div ng-show="User.editing || User.inserting"> 
+      <form crn-datasource="User"> 
+        <div class="list" ng-disabled="!User.editing &amp;&amp; !User.inserting"> 
+          <!-- email begin --> 
+          <label for="textinput-email" class="item item-input item-stacked-label" data-component="crn-input-floating"> <span class="input-label">Email</span> <input type="text" placeholder="Email" ng-model="User.active.email" id="textinput-email" name="textinput-email"> </label> 
+          <!-- name begin --> 
+          <label for="textinput-name" class="item item-input item-stacked-label" data-component="crn-input-floating"> <span class="input-label">{{'Users.view.Name' | translate}}</span> <input type="text" placeholder="{{'Users.view.Name' | translate}}" ng-model="User.active.name" id="textinput-name" name="textinput-name" required=""> </label> 
+          <!-- login begin --> 
+          <label for="textinput-login" class="item item-input item-stacked-label" data-component="crn-input-floating"> <span class="input-label">{{'Users.view.Login' | translate}}</span> <input type="text" placeholder="{{'Users.view.Login' | translate}}" ng-model="User.active.login" id="textinput-login" name="textinput-login" required=""> </label> 
+          <!-- picture begin --> 
+          <label for="textinput-picture" class="item item-input item-stacked-label" data-component="crn-input-floating"> <span class="input-label">{{'Admin.view.Picture' | translate}}</span> <input type="text" placeholder="{{'Admin.view.Picture' | translate}}" ng-model="User.active.picture" id="textinput-picture" name="textinput-picture"> </label> 
+          <!-- password begin --> 
+          <label for="textinput-password" class="item item-input item-stacked-label" data-component="crn-input-floating"> <span class="input-label">{{'Home.view.Password' | translate}}</span> <input type="text" placeholder="{{'Home.view.Password' | translate}}" ng-model="User.active.password" id="textinput-password" name="textinput-password" required=""> </label> 
+          <!-- NtoN  --> 
+          <!-- NtoN  end--> 
+        </div> 
+      </form> 
+    </div> 
+  </ion-content> 
+</ion-view>

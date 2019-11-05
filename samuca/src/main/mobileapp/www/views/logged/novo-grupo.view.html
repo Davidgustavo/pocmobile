@@ -1,0 +1,17 @@
+<ion-view class="pane">
+  <ion-header-bar align-title="center" class="bar bar-positive" xattr-theme="bar-positive" data-component="crn-ion-header-bar">
+    <div class="buttons buttons-left header-item">
+      <button class="button button-clear" data-component="crn-button" xattr-type="button-clear" ng-click="this.$ionicGoBack()"> <i class="icon ion ion-android-arrow-back"></i> </button>
+    </div>
+    <h1 class="title">Criar Grupo</h1>
+    <div class="buttons buttons-right header-item">
+      <button ng-disabled="vars.groupName == null || vars.groupName == '' || vars.groupName == undefined" class="button button-clear" data-component="crn-button" xattr-type="button-clear" ng-click="cronapi.client('js.blockly.Group.Group.createGroup').run(vars.groupName)"> <i class="icon ion ion-checkmark-circled"></i> </button>
+    </div>
+  </ion-header-bar>
+  <ion-content data-component="crn-ion-content" class="scroll-content has-header">
+  
+  <label for="textinput-email" class="item item-input item-stacked-label" data-component="crn-input-floating">
+      <span class="input-label">Nome do Grupo</span>
+      <input ng-model="vars.groupName" type="text" placeholder="Informe o nome do grupo" id="textinput-email" name="textinput-email">
+    </label>
+</ion-content></ion-view>

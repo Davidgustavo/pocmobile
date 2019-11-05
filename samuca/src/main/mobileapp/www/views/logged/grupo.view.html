@@ -1,0 +1,29 @@
+<div id="starter" ng-init="" ng-destroy="" data-component="crn-start" screen-params=""><ion-view class="pane"> 
+  <ion-header-bar align-title="left" class="bar bar-positive" xattr-theme="bar-positive" data-component="crn-ion-header-bar"> 
+    <div class="buttons buttons-left header-item"> 
+      <button class="button button-clear" data-component="crn-button" xattr-type="button-clear" ng-click="this.$ionicGoBack()"> <i class="icon ion ion-android-arrow-back"></i> </button> 
+    </div> 
+    <h1 class="title">{{params.groupName}}</h1>
+    <div class="buttons buttons-right header-item">
+      <button class="button button-clear" data-component="crn-button" xattr-type="button-clear" ng-click="cronapi.client('js.blockly.Group.Group.goAddUser').run(params.groupId)"> <i class="icon ion ion-android-people"></i> </button>
+    </div>
+  </ion-header-bar> 
+  <ion-content data-component="crn-ion-content" class="scroll-content has-header"> 
+   
+    <datasource name="findMessagesGroup" entity="app.query845380" keys="id,userName,message,userId" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill="" data-component="crn-datasource" class="component-holder" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:true},{&quot;name&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:true},{&quot;name&quot;:&quot;message&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:true},{&quot;name&quot;:&quot;userId&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:true}]" condition="{&quot;params&quot;:[{&quot;fieldName&quot;:&quot;groupId&quot;,&quot;fieldValue&quot;:&quot;{{params.groupId|raw}}&quot;}],&quot;expression&quot;:{&quot;type&quot;:&quot;AND&quot;,&quot;args&quot;:[]}}" auto-refresh="2000"></datasource>
+    <ul class="group-chat chatListMessages" ng-init="cronapi.client('js.blockly.chat.Chat.scrollBottom').run()"> 
+      <li class="messageItem mgs_received" ng-class="session.user.username == rowData.login ? 'mgs_sended' : 'mgs_received'" crn-repeat="findMessagesGroup" crn-datasource="findMessagesGroup">
+        <!--<img ng-show="session.user.username != rowData.login " data-ng-src="data:image/jpg;base64,{{rowData.userImage}}" class="component-holder user-avatar--chat" data-component="crn-image" id="crn-image-4054">-->
+        <div class="balonMessage">
+          <small class="by_message" ng-show="session.user.username != rowData.login ">{{rowData.userName}}</small>
+          <p>{{rowData.message}}</p> 
+        </div> 
+      </li>
+    </ul> 
+    
+    <div data="" class="item item-input-inset component-holder component-msm-send" data-component="crn-input-button" id="crn-input-button-117828"> 
+      <label class="item-input-wrapper input-text"> <textarea id="crn-textarea-590720" ng-model="vars.message" maxlength="300" style="resize:none;" resize="none" class="col item item-input component-holder" rows="1" placeholder="Digite sua mensagem..." data-component="crn-textarea"></textarea> </label> 
+      <button class="button component-holder button-small button-outline button-balanced" type="submit" ng-click="cronapi.client('js.blockly.chat.Chat.sendMessageGroup').run(vars.message, params.groupId)" data-component="crn-button" id="crn-button3861" xattr-type="button-outline" xattr-size="button-small" xattr-theme="button-balanced"> <i class="ion ion-android-send"></i> </button> 
+    </div> 
+  </ion-content> 
+</ion-view></div>

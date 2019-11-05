@@ -1,0 +1,1088 @@
+{
+  "auth": {
+    "customId": "auth",
+    "queryName": "Autenticar",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "User",
+    "entityFullName": "app.entity.User",
+    "query": "select o from User o where o.login \u003d :login",
+    "queryParamsValues": [
+      {
+        "fieldName": "login",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": false,
+      "POST": false,
+      "PUT": false,
+      "DELETE": false
+    },
+    "events": {},
+    "defaultValues": {},
+    "security": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/auth/"
+  },
+  "roles": {
+    "customId": "roles",
+    "queryName": "Obter Autorização",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "Role",
+    "entityFullName": "app.entity.Role",
+    "query": "select o.id from Role o where o.user.login \u003d :login",
+    "queryParamsValues": [
+      {
+        "fieldName": "login",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": false,
+      "POST": false,
+      "PUT": false,
+      "DELETE": false,
+      "FILTER": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/roles/"
+  },
+  "device": {
+    "customId": "device",
+    "queryName": "Atualizar Dispositivos",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "Device",
+    "entityFullName": "app.entity.Device",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "Device",
+          "namespace": "app.entity.Device",
+          "alias": "d"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "d",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "d.id",
+            "field": "d.id",
+            "type": "string",
+            "input": "text",
+            "operator": "equal",
+            "value": ":id",
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": true,
+      "paginatorAutomatic": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "id",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/1jy88nt41afza/"
+  },
+  "query333447": {
+    "customId": "query333447",
+    "queryName": "GetChats",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "Group",
+    "entityFullName": "app.entity.Group",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "Group",
+          "namespace": "app.entity.Group",
+          "alias": "g"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "g",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "g.name",
+            "field": "g.name",
+            "type": "string",
+            "input": "text",
+            "operator": "is_empty",
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": true,
+      "paginatorAutomatic": false
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true,
+      "COUNT": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "defaultValuesProperties": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/odata/v2/query333447/"
+  },
+  "query306735": {
+    "customId": "query306735",
+    "queryName": "Groups",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "Group",
+    "entityFullName": "app.entity.Group",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "Group",
+          "namespace": "app.entity.Group",
+          "alias": "g"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "g",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "g.name",
+            "field": "g.name",
+            "type": "string",
+            "input": "text",
+            "operator": "is_not_empty",
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": true,
+      "paginatorAutomatic": false
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true,
+      "COUNT": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "defaultValuesProperties": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/odata/v2/query306735/"
+  },
+  "query891039": {
+    "customId": "query891039",
+    "queryName": "GetUsers",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "User",
+    "entityFullName": "app.entity.User",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "User",
+          "namespace": "app.entity.User",
+          "alias": "u",
+          "name": "User"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "u",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "rules": [],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": true,
+      "paginatorAutomatic": false
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true,
+      "COUNT": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "defaultValuesProperties": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/odata/v2/query891039/"
+  },
+  "query251595": {
+    "customId": "getUsersGroup",
+    "queryName": "getUsersGroup",
+    "sourceType": "blockly",
+    "blockly": {
+      "type": "server",
+      "blocklyMethod": "getUsers",
+      "blocklyClass": "blockly.Group",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.Group",
+        "sourcePath": "src/main/java/blockly/Group.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "create",
+            "hasReturn": "true",
+            "params": [
+              "groupName"
+            ]
+          },
+          {
+            "name": "addUserGroup",
+            "hasReturn": "true",
+            "params": [
+              "groupId",
+              "userId"
+            ]
+          },
+          {
+            "name": "removeUserGroup",
+            "hasReturn": "true",
+            "params": [
+              "groupId",
+              "userId"
+            ]
+          },
+          {
+            "name": "getGroups",
+            "hasReturn": "true",
+            "params": []
+          },
+          {
+            "name": "getUsers",
+            "hasReturn": "true",
+            "params": [
+              "groupId",
+              "filtro"
+            ]
+          }
+        ]
+      },
+      "blocklyGETMethod": "getUsers",
+      "blocklyPOSTMethod": "default",
+      "blocklyPUTMethod": "default",
+      "blocklyDELETEMethod": "default",
+      "blocklyFILTERMethod": "default",
+      "blocklyCOUNTMethod": "getUsers"
+    },
+    "query": "",
+    "queryParamsValues": [
+      {
+        "fieldName": "groupId",
+        "fieldValue": "params.groupId"
+      },
+      {
+        "fieldName": "filtro",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true,
+      "COUNT": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "defaultValuesProperties": {
+      "add": {
+        "key": false,
+        "nullable": false,
+        "type": "Boolean"
+      },
+      "name": {
+        "key": false,
+        "nullable": false,
+        "type": "String"
+      },
+      "id": {
+        "key": true,
+        "nullable": false,
+        "type": "String"
+      },
+      "login": {
+        "key": false,
+        "nullable": false,
+        "type": "String"
+      },
+      "picture": {
+        "key": false,
+        "nullable": false,
+        "type": "String"
+      }
+    },
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/query251595/"
+  },
+  "query431530": {
+    "customId": "query431530",
+    "queryName": "getConversations",
+    "sourceType": "blockly",
+    "blockly": {
+      "type": "server",
+      "blocklyMethod": "getConversations",
+      "blocklyClass": "blockly.Chat",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.Chat",
+        "sourcePath": "src/main/java/blockly/Chat.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "findMessages",
+            "hasReturn": "true",
+            "params": [
+              "groupId"
+            ]
+          },
+          {
+            "name": "sendMessages",
+            "hasReturn": "false",
+            "params": [
+              "contactId",
+              "groupId",
+              "message"
+            ]
+          },
+          {
+            "name": "getIdUserLogged",
+            "hasReturn": "true",
+            "params": [
+              "name"
+            ]
+          },
+          {
+            "name": "getGroupId",
+            "hasReturn": "true",
+            "params": [
+              "userId",
+              "contactId"
+            ]
+          },
+          {
+            "name": "createGroup",
+            "hasReturn": "true",
+            "params": [
+              "userId",
+              "contactId"
+            ]
+          },
+          {
+            "name": "getConversations",
+            "hasReturn": "true",
+            "params": []
+          }
+        ]
+      },
+      "blocklyGETMethod": "getConversations",
+      "blocklyPOSTMethod": "getConversations",
+      "blocklyPUTMethod": "getConversations",
+      "blocklyDELETEMethod": "getConversations",
+      "blocklyFILTERMethod": "getConversations",
+      "blocklyCOUNTMethod": "getConversations"
+    },
+    "query": "",
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true,
+      "FILTERAuthorities": [
+        "Administrators",
+        "Authenticated"
+      ],
+      "COUNT": true,
+      "COUNTAuthorities": [
+        "Authenticated"
+      ]
+    },
+    "events": {},
+    "defaultValues": {},
+    "defaultValuesProperties": {
+      "userLogin": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "userImage": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "contactLogin": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "contactId": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "contactName": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "contactImage": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "id": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "userName": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "message": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "userId": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      }
+    },
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/query431530/"
+  },
+  "query447050": {
+    "customId": "query447050",
+    "queryName": "findMessages",
+    "sourceType": "blockly",
+    "blockly": {
+      "type": "server",
+      "blocklyMethod": "findMessages",
+      "blocklyClass": "blockly.Chat",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.Chat",
+        "sourcePath": "src/main/java/blockly/Chat.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "sendMessages",
+            "hasReturn": "false",
+            "params": [
+              "contactId",
+              "groupId",
+              "message"
+            ]
+          },
+          {
+            "name": "getIdUserLogged",
+            "hasReturn": "true",
+            "params": [
+              "name"
+            ]
+          },
+          {
+            "name": "createGroup",
+            "hasReturn": "true",
+            "params": [
+              "userId",
+              "contactId"
+            ]
+          },
+          {
+            "name": "findMessagesGroup",
+            "hasReturn": "true",
+            "params": [
+              "groupId"
+            ]
+          },
+          {
+            "name": "findMessages",
+            "hasReturn": "true",
+            "params": [
+              "groupId",
+              "contactId"
+            ]
+          },
+          {
+            "name": "sendMessageGroup",
+            "hasReturn": "false",
+            "params": [
+              "message",
+              "groupId"
+            ]
+          },
+          {
+            "name": "getConversations",
+            "hasReturn": "true",
+            "params": []
+          },
+          {
+            "name": "getGroupId",
+            "hasReturn": "true",
+            "params": [
+              "userId",
+              "contactId"
+            ]
+          }
+        ]
+      },
+      "blocklyGETMethod": "findMessages",
+      "blocklyPOSTMethod": "findMessages",
+      "blocklyPUTMethod": "findMessages",
+      "blocklyDELETEMethod": "findMessages",
+      "blocklyFILTERMethod": "findMessages",
+      "blocklyCOUNTMethod": "findMessages"
+    },
+    "query": "",
+    "queryParamsValues": [
+      {
+        "fieldName": "groupId",
+        "fieldValue": "params.groupId"
+      },
+      {
+        "fieldName": "contactId",
+        "fieldValue": "params.contactId"
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true,
+      "COUNT": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "defaultValuesProperties": {
+      "id": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "userName": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "message": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "login": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "userId": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      }
+    },
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/query447050/"
+  },
+  "query54340": {
+    "customId": "getGroups",
+    "queryName": "getGroups",
+    "sourceType": "blockly",
+    "baseEntity": "app.entity.Group",
+    "blockly": {
+      "type": "server",
+      "blocklyMethod": "getGroups",
+      "blocklyClass": "blockly.Group",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.Group",
+        "sourcePath": "src/main/java/blockly/Group.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "create",
+            "hasReturn": "true",
+            "params": [
+              "groupName"
+            ]
+          },
+          {
+            "name": "addUserGroup",
+            "hasReturn": "true",
+            "params": [
+              "groupId",
+              "userId"
+            ]
+          },
+          {
+            "name": "removeUserGroup",
+            "hasReturn": "true",
+            "params": [
+              "groupId",
+              "userId"
+            ]
+          },
+          {
+            "name": "getUsers",
+            "hasReturn": "true",
+            "params": [
+              "groupId"
+            ]
+          },
+          {
+            "name": "getGroups",
+            "hasReturn": "true",
+            "params": []
+          }
+        ]
+      },
+      "blocklyGETMethod": "getGroups",
+      "blocklyPOSTMethod": "default",
+      "blocklyPUTMethod": "default",
+      "blocklyDELETEMethod": "default",
+      "blocklyFILTERMethod": "default",
+      "blocklyCOUNTMethod": "getGroups"
+    },
+    "query": "",
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true,
+      "COUNT": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "defaultValuesProperties": {
+      "createdAt": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "contact": {
+        "key": false,
+        "nullable": false,
+        "type": "User"
+      },
+      "name": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "id": {
+        "key": true,
+        "nullable": false,
+        "type": "String"
+      },
+      "user": {
+        "key": false,
+        "nullable": false,
+        "type": "User"
+      }
+    },
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/query54340/"
+  },
+  "query845380": {
+    "customId": "findMessagesGroup",
+    "queryName": "findMessagesGroup",
+    "sourceType": "blockly",
+    "blockly": {
+      "type": "server",
+      "blocklyMethod": "findMessagesGroup",
+      "blocklyClass": "blockly.Chat",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.Chat",
+        "sourcePath": "src/main/java/blockly/Chat.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "sendMessages",
+            "hasReturn": "false",
+            "params": [
+              "contactId",
+              "groupId",
+              "message"
+            ]
+          },
+          {
+            "name": "getIdUserLogged",
+            "hasReturn": "true",
+            "params": [
+              "name"
+            ]
+          },
+          {
+            "name": "getGroupId",
+            "hasReturn": "true",
+            "params": [
+              "userId",
+              "contactId"
+            ]
+          },
+          {
+            "name": "createGroup",
+            "hasReturn": "true",
+            "params": [
+              "userId",
+              "contactId"
+            ]
+          },
+          {
+            "name": "findMessagesGroup",
+            "hasReturn": "true",
+            "params": [
+              "groupId"
+            ]
+          },
+          {
+            "name": "findMessages",
+            "hasReturn": "true",
+            "params": [
+              "groupId"
+            ]
+          },
+          {
+            "name": "getConversations",
+            "hasReturn": "true",
+            "params": []
+          }
+        ]
+      },
+      "blocklyGETMethod": "findMessagesGroup",
+      "blocklyPOSTMethod": "findMessagesGroup",
+      "blocklyPUTMethod": "findMessagesGroup",
+      "blocklyDELETEMethod": "findMessagesGroup",
+      "blocklyFILTERMethod": "findMessagesGroup",
+      "blocklyCOUNTMethod": "findMessagesGroup"
+    },
+    "query": "",
+    "queryParamsValues": [
+      {
+        "fieldName": "groupId",
+        "fieldValue": "params.groupId"
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true,
+      "COUNT": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "defaultValuesProperties": {
+      "userImage": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "id": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "userName": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "message": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "login": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "userId": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      }
+    },
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/query845380/"
+  },
+  "query290182": {
+    "customId": "getUsersWithFilter",
+    "queryName": "getUsersWithFilter",
+    "sourceType": "blockly",
+    "baseEntity": "app.entity.User",
+    "blockly": {
+      "type": "server",
+      "blocklyMethod": "getUsers",
+      "blocklyClass": "blockly.User",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.User",
+        "sourcePath": "src/main/java/blockly/User.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "getUsers",
+            "hasReturn": "true",
+            "params": [
+              "filtro"
+            ]
+          }
+        ]
+      },
+      "blocklyGETMethod": "getUsers",
+      "blocklyPOSTMethod": "default",
+      "blocklyPUTMethod": "default",
+      "blocklyDELETEMethod": "default",
+      "blocklyFILTERMethod": "default",
+      "blocklyCOUNTMethod": "getUsers"
+    },
+    "query": "",
+    "queryParamsValues": [
+      {
+        "fieldName": "filtro",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true,
+      "COUNT": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "defaultValuesProperties": {
+      "password": {
+        "key": false,
+        "nullable": false,
+        "type": "String"
+      },
+      "name": {
+        "key": false,
+        "nullable": false,
+        "type": "String"
+      },
+      "theme": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "id": {
+        "key": true,
+        "nullable": false,
+        "type": "String"
+      },
+      "login": {
+        "key": false,
+        "nullable": false,
+        "type": "String"
+      },
+      "email": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      },
+      "picture": {
+        "key": false,
+        "nullable": true,
+        "type": "String"
+      }
+    },
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/query290182/"
+  },
+  "query137238": {
+    "customId": "query137238",
+    "queryName": "consultaUser",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "User",
+    "entityFullName": "app.entity.User",
+    "query": {
+      "isEmpty": true,
+      "isRawSql": true,
+      "sqlContent": "SELECT u from User u \r\nwhere ( lower(u.name) LIKE (CONCAT(\u0027%\u0027, lower(:filtro), \u0027%\u0027)) OR :filtro is  null ) and u.id \u003c\u003e :id \r\nORDER BY u.name ASC",
+      "multiTenant": true,
+      "paginatorAutomatic": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "filtro",
+        "fieldValue": ""
+      },
+      {
+        "fieldName": "id",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true,
+      "COUNT": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "defaultValuesProperties": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/odata/v2/query137238/"
+  }
+}

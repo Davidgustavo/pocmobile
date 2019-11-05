@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="src/main/mobileapp/www/views/logged/grupos.view.html" resourceType="JS" ruleDescription="GoChat" ruleName="GoChat" ruleSynchronous="false" ruleTimeout="300" ruleType="I">
+  <metadata scale="1" scrollx="625.4000000000001" scrolly="-41.49999999999994" target="V+zuU8W{Ef81grUNPVvY"/>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-397" y="107">
+    <mutation>
+      <arg name="contactId"/>
+      <arg name="groupId"/>
+    </mutation>
+    <field name="NAME">Execute</field>
+    <comment h="80" pinned="false" w="160">GoChat</comment>
+    <statement name="STACK">
+      <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="jUM0Wv9UGE?`#OiV|l9=" multilayer="true" namespace="cronapi.screen.changeView" origintype="procedures_open_form_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EChange%20view%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20change%20the%20current%20view%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Destination%20view%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Parameters%20:%20List%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.changeView%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.changeView%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_open_form_callnoreturn">
+        <mutation data="%7B%22form%22:%22#/app/logged/chat%22,%22params%22:%22%5B%5C%22contactId%5C%22,%5C%22groupId%5C%22%5D%22%7D" name="{{cronapi.screen.changeView}}">
+          <arg name="contactId"/>
+          <arg name="groupId"/>
+        </mutation>
+        <value name="ARG0">
+          <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="hP42*e_XEAR,|lShl?Qf" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field name="VAR">contactId</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="o%cMI:ZSD;*=4P]@av,S" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field name="VAR">groupId</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block colour="#995ba5" id="V+zuU8W{Ef81grUNPVvY" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-487" y="113">
+    <mutation>
+      <arg name="groupId"/>
+      <arg name="groupName"/>
+    </mutation>
+    <field name="NAME">GoGroup</field>
+    <comment h="80" pinned="false" w="160">GoChat</comment>
+    <statement name="STACK">
+      <block colour="#934848" dependencyby="V+zuU8W{Ef81grUNPVvY" id="i^#oGm:7!.CsMe}R=b7|" multilayer="true" namespace="cronapi.screen.changeView" origintype="procedures_open_form_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EChange%20view%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20change%20the%20current%20view%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Destination%20view%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Parameters%20:%20List%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.changeView%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.changeView%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_open_form_callnoreturn">
+        <mutation data="%7B%22form%22:%22#/app/logged/grupo%22,%22params%22:%22%5B%5C%22groupId%5C%22,%5C%22groupName%5C%22%5D%22%7D" name="{{cronapi.screen.changeView}}">
+          <arg name="groupId"/>
+          <arg name="groupName"/>
+        </mutation>
+        <value name="ARG0">
+          <block colour="#0088ee" dependencyby="V+zuU8W{Ef81grUNPVvY" id="Y+;Ux?PiRgsXy4Dy*KB6" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field name="VAR">groupId</field>
+          </block>
+        </value>
+        <value name="ARG1">
+          <block colour="#0088ee" dependencyby="V+zuU8W{Ef81grUNPVvY" id="f,w8(zy#x`~/{%~rcf2x" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field name="VAR">groupName</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block colour="#c88330" dependencyby="V+zuU8W{Ef81grUNPVvY" id="3@4;9%yUXj[~4V;i;jX=" multilayer="false" namespace="cronapi.object.getObjectField" origintype="procedures_get_field" output="true" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20field%20of%20Screen%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20get%20object%20field%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%20:%20Object%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Field%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.object.getObjectField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.object.getObjectField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_get_field" x="-172" y="263">
+    <mutation name="{{cronapi.object.getObjectField}}">
+      <arg name="Object"/>
+      <arg name="Field"/>
+    </mutation>
+    <value name="PARAM0">
+      <block colour="#934848" dependencyby="V+zuU8W{Ef81grUNPVvY" id="{@%F2TRV/YiHMu511:tV" inline="true" multilayer="false" namespace="cronapi.screen.getValueOfField" origintype="procedures_callreturn" output="true" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20value%20of%20field%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20get%20value%20of%20field%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Field%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Object%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.getValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.getValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+        <mutation name="{{cronapi.screen.getValueOfField}}" return-raw-type="undefined">
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Field"/>
+        </mutation>
+        <value name="ARG0">
+          <block colour="#934848" dependencyby="V+zuU8W{Ef81grUNPVvY" id="e(^_d0zxVkbI2un:m+0w" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+            <field name="SELECT">vars.cronlist4982</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <value name="PARAM1">
+      <block colour="#5ba593" dependencyby="V+zuU8W{Ef81grUNPVvY" id="{7flhOG?Lf[(}lNnN|z^" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+        <field name="TEXT">id</field>
+      </block>
+    </value>
+  </block>
+</blockly>

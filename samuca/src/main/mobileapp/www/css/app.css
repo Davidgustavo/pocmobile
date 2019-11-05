@@ -1,0 +1,130 @@
+.action-btn {
+    background: none;
+    border: none;
+    font-size: 8px;
+    color: #00c167;
+}
+
+.group-actions {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+}
+
+li.messageItem .by_message {
+    display: block;
+    margin: 0 0 5px;
+}
+
+.mt-10 {
+    margin-top: 10px !important;
+}
+
+ion-content button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.input-text {
+  background: none;
+  border: none;
+}
+
+.input-text textarea {
+  border: none !important;
+}
+
+.component-msm-send {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+li.messageItem .balonMessage {
+    background: #DDD;
+    margin: 10px;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+li.messageItem .balonMessage p {
+    margin: 0;
+}
+
+.mgs_sended {
+    text-align: right;
+}
+
+.mgs_sended .balonMessage {
+    background: #d4ecff !important;
+    border-bottom-right-radius: 2px !important;
+    background: #b0ffda !important;
+}
+
+.mgs_received .balonMessage {
+  border-bottom-left-radius: 2px !important;
+}
+
+ul.chatListMessages {
+    height: calc(100vh - 98px);
+    overflow-y: scroll;
+}
+
+.bar.bar-positive {
+    border-color: #00c167;
+    background-color: #00c167;
+    background-image: linear-gradient(0deg, #00c167,#00c167 50%, transparent 50%);
+}
+
+.menu-view {
+    background-color: #00c167;
+}
+
+.login-bg {
+    background: -webkit-linear-gradient(45deg,#00c167 0,#4bd195 76%,#81ddb6 95%);
+}
+
+.login-bg .button {
+    color: #02c168 !important;
+}
+
+.has-header { 
+  top: 44px !important;
+}
+
+.center-login-form {
+    position: relative;
+    top: calc(50% - 180px);
+}
+
+.action-danger {
+    color: #ff2212;
+}
+
+.user-avatar--chat {
+    width: 40px !important;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-left: 10px;
+    bottom: 10px;
+    position: absolute;
+}
+
+.group-chat .mgs_received {
+    display: block;
+    position: relative;
+}
+
+.flag-group {
+    font-size: 12px;
+    background: #00c167;
+    color: #FFF;
+    padding: 2px 4px;
+    border-radius: 3px;
+}

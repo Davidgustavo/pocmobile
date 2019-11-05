@@ -1,0 +1,35 @@
+<div id="starter" ng-init="" ng-destroy="" data-component="crn-start" screen-params=""><ion-view class="pane"> 
+  <ion-header-bar align-title="left" class="bar bar-positive" xattr-theme="bar-positive" data-component="crn-ion-header-bar"> 
+    <div class="buttons buttons-left header-item"> 
+      <button class="button button-clear" data-component="crn-button" xattr-type="button-clear" ng-click="cronapi.screen.changeView('#/app/logged/home', [])"> <i class="icon ion ion-android-arrow-back"></i> </button> 
+    </div> 
+    <h1 class="title">Conversa</h1> 
+  </ion-header-bar> 
+  <ion-content data-component="crn-ion-content" class="scroll-content component-holder has-header"> 
+ 
+    <ul class="chatListMessages" ng-init="cronapi.client('js.blockly.chat.Chat.scrollBottom').run()"> 
+      <datasource name="listMessages" entity="app.query447050" keys="id,userName,message,login,userId" rows-per-page="10000" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill="" data-component="crn-datasource" class="component-holder" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:true},{&quot;name&quot;:&quot;userName&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:true},{&quot;name&quot;:&quot;message&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:true},{&quot;name&quot;:&quot;login&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:true},{&quot;name&quot;:&quot;userId&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:true}]" condition="{&quot;params&quot;:[{&quot;fieldName&quot;:&quot;groupId&quot;,&quot;fieldValue&quot;:&quot;{{params.groupId|raw}}&quot;},{&quot;fieldName&quot;:&quot;contactId&quot;,&quot;fieldValue&quot;:&quot;{{params.contactId|raw}}&quot;}],&quot;expression&quot;:{&quot;type&quot;:&quot;AND&quot;,&quot;args&quot;:[]}}" auto-refresh="2000" lazy=""></datasource><div class="balonMessage"> 
+
+      
+      <li class="messageItem" ng-class="session.user.username == rowData.login ? &quot;mgs_sended&quot;:&quot;mgs_received&quot;" crn-repeat="listMessages" crn-datasource="listMessages"> 
+        <div class="balonMessage"> 
+          <p>{{rowData.message}}</p> 
+        </div> 
+      </li>
+      
+    <!--  <li class="messageItem mgs_sended"> -->
+    <!--    <div class="balonMessage"> -->
+    <!--      <p>Lorem impsum Lorem impsum Lorem impsum Lorem impsum</p> -->
+    <!--    </div> -->
+    <!--  </li>-->
+    <!--</ul> -->
+    
+    </div></ul>
+    
+    <div data="" class="item item-input-inset component-holder component-msm-send" data-component="crn-input-button" id="crn-input-button-117828"> 
+      <label class="item-input-wrapper input-text"> 
+        <textarea id="crn-textarea-590720" ng-model="vars.message" maxlength="300" style="resize:none;" resize="none" class="col item item-input component-holder" rows="1" placeholder="Digite sua mensagem..." data-component="crn-textarea"></textarea> 
+      </label> 
+      <button class="button component-holder button-small button-outline button-balanced" type="submit" ng-click="cronapi.client('js.blockly.chat.Chat.sendMessage').run(vars.message, params.contactId, params.groupId)" data-component="crn-button" id="crn-button3861" xattr-type="button-outline" xattr-size="button-small" xattr-theme="button-balanced"> <i class="ion ion-android-send"></i> </button> 
+    </div> 
+</ion-content></ion-view></div>

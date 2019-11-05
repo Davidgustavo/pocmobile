@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="src/main/mobileapp/www/views/logged/chat.view.html" resourceType="JS" ruleDescription="Chat" ruleName="Chat" ruleSynchronous="false" ruleTimeout="300" ruleType="I">
+  <metadata scale="1" scrollx="2155.4" scrolly="143.2" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Cria uma função que possui um valor de retorno." type="procedures_defreturn" x="-2017" y="-67">
+    <mutation>
+      <arg name="message"/>
+      <arg name="contactId"/>
+      <arg name="groupId"/>
+    </mutation>
+    <field name="NAME">sendMessage</field>
+    <comment h="80" pinned="false" w="160">Chat</comment>
+    <statement name="STACK">
+      <block colour="#5b80a5" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="U~/i41rlO^0@9^zZwte4" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
+        <value name="IF0">
+          <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=";lj/Xt2o*(hVFD#.p.Lo" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field name="VAR">message</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block colour="#487f7f" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="jPk0eo4o#UKMl_J+r:)3" multilayer="false" namespace="cronapi.util.callServerBlocklyAsynchronous" origintype="procedures_callblockly_callreturn_async" output="false" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EChamar%20bloco%20servidor%20ass%C3%ADncrono%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EChamar%20bloco%20servidor%20ass%C3%ADncrono%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Nome%20da%20fun%C3%A7%C3%A3o%20do%20bloco%20que%20dever%C3%A1%20ser%20chamada%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Fun%C3%A7%C3%A3o%20que%20dever%C3%A1%20ser%20executada,%20quando%20finalizar%20a%20execu%C3%A7%C3%A3o%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20:%20Lista%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.util.callServerBlocklyAsynchronous%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.util.callServerBlocklyAsynchronous%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callblockly_callreturn_async">
+            <mutation data="%7B%22name%22:%22Chat%22,%22class%22:%22blockly.Chat%22,%22function%22:%22sendMessages%22,%22oldName%22:%22sendMessages%22,%22params%22:%22%5B%5C%22contactId%5C%22,%5C%22groupId%5C%22,%5C%22message%5C%22%5D%22,%22type%22:%22java%22,%22namespace%22:%22blockly.Chat%22,%22jsonBlocklySelected%22:%7B%22namespace%22:%22blockly.Chat%22,%22sourcePath%22:%22src/main/java/blockly/Chat.blockly%22,%22language%22:%22java%22,%22class%22:%22blockly.Chat%22,%22methods%22:%5B%7B%22name%22:%22getIdUserLogged%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22name%22%5D%7D,%7B%22name%22:%22sendMessages%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22contactId%22,%22groupId%22,%22message%22%5D%7D,%7B%22name%22:%22createGroup%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22userId%22,%22contactId%22%5D%7D,%7B%22name%22:%22findMessages%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22groupId%22,%22contactId%22%5D%7D,%7B%22name%22:%22findMessagesGroup%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22groupId%22%5D%7D,%7B%22name%22:%22sendMessageGroup%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22message%22,%22groupId%22%5D%7D,%7B%22name%22:%22getGroupId%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22userId%22,%22contactId%22%5D%7D,%7B%22name%22:%22getConversations%22,%22hasReturn%22:%22true%22,%22params%22:%5B%5D%7D%5D%7D%7D" name="{{cronapi.util.callServerBlocklyAsynchronous}}">
+              <arg name="contactId"/>
+              <arg name="groupId"/>
+              <arg name="message"/>
+            </mutation>
+            <field name="VAR_SENDERSTATEMENTSENDER">item</field>
+            <statement name="STATEMENTSENDER">
+              <block colour="#E42091" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="OKWESeVmmVCsWgf`-z61" multilayer="false" namespace="cronapi.myfunctions.scroll" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3Escroll%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EElemento%20elem%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20elem%20:%20Texto%3C/span%3E%3Cdiv%3E%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.myfunctions.scroll%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.myfunctions.scroll%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                <mutation name="{{cronapi.myfunctions.scroll}}" return-raw-type="undefined">
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="elem"/>
+                </mutation>
+                <value name="ARG0">
+                  <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="@:dCuH-%eu7hn~4pN8{X" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT"/>
+                  </shadow>
+                  <block colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="^v6AB.w;DJ0SUTY?o8~Q" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">.chatListMessages</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="ARG0">
+              <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="6VsVr6$QDASVGz?SElyW" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field name="VAR">contactId</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="|#(eY.VzMUFI1vcttD_h" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field name="VAR">groupId</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <block colour="#0088ee" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="%KAsiSeW*qO`~`=SW?Bb" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field name="VAR">message</field>
+              </block>
+            </value>
+            <next>
+              <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="IcWpdQ._2EzU998T*Os." multilayer="true" namespace="cronapi.screen.changeValueOfField" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EChange%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20change%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Field%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20value%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.changeValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.changeValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                <mutation name="{{cronapi.screen.changeValueOfField}}" return-raw-type="undefined">
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Field"/>
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="value"/>
+                </mutation>
+                <value name="ARG0">
+                  <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="0S{mYOcVUa45%oAXJ^*?" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+                    <field name="SELECT">vars.message</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="ZJad1}fh,M65=VWN-3fd" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT"/>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block colour="#fca03b" id="L7eQx]nEAUav[mb*UyQl" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-1882" y="113">
+    <field name="NAME">scrollBottom</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <statement name="STACK">
+      <block colour="#E42091" dependencyby="L7eQx]nEAUav[mb*UyQl" id="^^llELkL.!1pU-w67h{6" multilayer="false" namespace="cronapi.myfunctions.scroll" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3Escroll%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EElemento%20elem%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20elem%20:%20Texto%3C/span%3E%3Cdiv%3E%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.myfunctions.scroll%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.myfunctions.scroll%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+        <mutation name="{{cronapi.myfunctions.scroll}}" return-raw-type="undefined">
+          <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="elem"/>
+        </mutation>
+        <value name="ARG0">
+          <shadow colour="#5ba593" dependencyby="L7eQx]nEAUav[mb*UyQl" id=".j;^.(~s5n,x7^P$*}]L" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">.chatListMessages</field>
+          </shadow>
+          <block colour="#5ba593" dependencyby="L7eQx]nEAUav[mb*UyQl" id="22Rs=q:Ff%xd]?1lL6{E" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">.chatListMessages</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block colour="#fca03b" id="l#Sm$ymz5h4DB@v?TtB@" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-1764" y="128">
+    <mutation>
+      <arg name="message"/>
+      <arg name="groupId"/>
+    </mutation>
+    <field name="NAME">sendMessageGroup</field>
+    <comment h="80" pinned="false" w="160">Descreva esta função...</comment>
+    <statement name="STACK">
+      <block colour="#5b80a5" dependencyby="l#Sm$ymz5h4DB@v?TtB@" id=":ZSk;!~=I=]M-l0j!EYA" origintype="controls_if" output="false" tooltip="function () { [native code] }" type="controls_if">
+        <value name="IF0">
+          <block colour="#0088ee" dependencyby="l#Sm$ymz5h4DB@v?TtB@" id="XbMdp3Xf(6M3ZRKV.OY8" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+            <field name="VAR">message</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block colour="#487f7f" dependencyby="l#Sm$ymz5h4DB@v?TtB@" id="RJ_G0%urXLX6XOARGtTx" multilayer="false" namespace="cronapi.util.callServerBlocklyAsynchronous" origintype="procedures_callblockly_callreturn_async" output="false" returntype="ObjectType.OBJECT" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EChamar%20bloco%20servidor%20ass%C3%ADncrono%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EChamar%20bloco%20servidor%20ass%C3%ADncrono%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Nome%20da%20fun%C3%A7%C3%A3o%20do%20bloco%20que%20dever%C3%A1%20ser%20chamada%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Fun%C3%A7%C3%A3o%20que%20dever%C3%A1%20ser%20executada,%20quando%20finalizar%20a%20execu%C3%A7%C3%A3o%20:%20Objeto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20:%20Lista%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Objeto%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.util.callServerBlocklyAsynchronous%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.util.callServerBlocklyAsynchronous%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callblockly_callreturn_async">
+            <mutation data="%7B%22name%22:%22Chat%22,%22class%22:%22blockly.Chat%22,%22function%22:%22sendMessageGroup%22,%22oldName%22:%22sendMessageGroup%22,%22params%22:%22%5B%5C%22message%5C%22,%5C%22groupId%5C%22%5D%22,%22type%22:%22java%22,%22namespace%22:%22blockly.Chat%22,%22jsonBlocklySelected%22:%7B%22namespace%22:%22blockly.Chat%22,%22sourcePath%22:%22src/main/java/blockly/Chat.blockly%22,%22language%22:%22java%22,%22class%22:%22blockly.Chat%22,%22methods%22:%5B%7B%22name%22:%22getIdUserLogged%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22name%22%5D%7D,%7B%22name%22:%22sendMessages%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22contactId%22,%22groupId%22,%22message%22%5D%7D,%7B%22name%22:%22createGroup%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22userId%22,%22contactId%22%5D%7D,%7B%22name%22:%22findMessages%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22groupId%22,%22contactId%22%5D%7D,%7B%22name%22:%22findMessagesGroup%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22groupId%22%5D%7D,%7B%22name%22:%22sendMessageGroup%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22message%22,%22groupId%22%5D%7D,%7B%22name%22:%22getGroupId%22,%22hasReturn%22:%22true%22,%22params%22:%5B%22userId%22,%22contactId%22%5D%7D,%7B%22name%22:%22getConversations%22,%22hasReturn%22:%22true%22,%22params%22:%5B%5D%7D%5D%7D%7D" name="{{cronapi.util.callServerBlocklyAsynchronous}}">
+              <arg name="message"/>
+              <arg name="groupId"/>
+            </mutation>
+            <field name="VAR_SENDERSTATEMENTSENDER">item</field>
+            <statement name="STATEMENTSENDER">
+              <block colour="#E42091" dependencyby="l#Sm$ymz5h4DB@v?TtB@" id="8}3LI+st}0AodnBz+Xb#" multilayer="false" namespace="cronapi.myfunctions.scroll" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3Escroll%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EElemento%20elem%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20elem%20:%20Texto%3C/span%3E%3Cdiv%3E%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.myfunctions.scroll%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.myfunctions.scroll%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                <mutation name="{{cronapi.myfunctions.scroll}}" return-raw-type="undefined">
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="elem"/>
+                </mutation>
+                <value name="ARG0">
+                  <shadow colour="#5ba593" dependencyby="l#Sm$ymz5h4DB@v?TtB@" id="_wE)bQ0LOzW)zR.YYbjD" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT"/>
+                  </shadow>
+                  <block colour="#5ba593" dependencyby="l#Sm$ymz5h4DB@v?TtB@" id="AJ5|u3.GlxR0~Rk88sb$" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT">.chatListMessages</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="ARG0">
+              <block colour="#0088ee" dependencyby="l#Sm$ymz5h4DB@v?TtB@" id="h0CT;36^(sI+[Y3[mt=4" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field name="VAR">message</field>
+              </block>
+            </value>
+            <value name="ARG1">
+              <block colour="#0088ee" dependencyby="l#Sm$ymz5h4DB@v?TtB@" id="FnTw1;{m.h*]bA6USm0I" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field name="VAR">groupId</field>
+              </block>
+            </value>
+            <next>
+              <block colour="#934848" dependencyby="l#Sm$ymz5h4DB@v?TtB@" id="taDnvPpgR~K+r2)l8Q{K" multilayer="true" namespace="cronapi.screen.changeValueOfField" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EChange%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20to%20change%20field%20value%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParameters:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Field%20:%20String%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20value%20:%20String%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EHelp:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.changeValueOfField%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.changeValueOfField%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+                <mutation name="{{cronapi.screen.changeValueOfField}}" return-raw-type="undefined">
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="Field"/>
+                  <arg cronapi-raw-type="undefined" cronapi-type="ObjectType.STRING" name="value"/>
+                </mutation>
+                <value name="ARG0">
+                  <block colour="#934848" dependencyby="l#Sm$ymz5h4DB@v?TtB@" id="k=YRJ9~Wu`/t(zK$%*|H" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+                    <field name="SELECT">vars.message</field>
+                  </block>
+                </value>
+                <value name="ARG1">
+                  <shadow colour="#5ba593" dependencyby="l#Sm$ymz5h4DB@v?TtB@" id="%s]+3I]7-nKr?}|3ex6K" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                    <field name="TEXT"/>
+                  </shadow>
+                </value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block colour="#934848" dependencyby="Anb:u5+^,0vLkL9QIqn5" id=":XdYQw{7cTms7Ogn0`Ds" multilayer="true" namespace="cronapi.screen.changeView" origintype="procedures_open_form_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EMudar%20formul%C3%A1rio%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20mudar%20o%20formul%C3%A1rio%20corrente%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Formul%C3%A1rio%20de%20destino%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20:%20Lista%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.changeView%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.changeView%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_open_form_callnoreturn" x="-91" y="559">
+    <mutation data="%7B%22form%22:%22#/app/logged/home%22,%22params%22:%22%5B%5C%22filter%5C%22%5D%22%7D" name="{{cronapi.screen.changeView}}">
+      <arg name="filter"/>
+    </mutation>
+  </block>
+  <block colour="#934848" dependencyby="l#Sm$ymz5h4DB@v?TtB@" id="ML45#*^A|3TyhfInBFDV" multilayer="true" namespace="cronapi.screen.changeView" origintype="procedures_open_form_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EMudar%20formul%C3%A1rio%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20mudar%20o%20formul%C3%A1rio%20corrente%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Formul%C3%A1rio%20de%20destino%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Par%C3%A2metros%20:%20Lista%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.screen.changeView%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.screen.changeView%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_open_form_callnoreturn" x="-71" y="599">
+    <mutation data="%7B%22form%22:%22#/app/logged/home%22,%22params%22:%22%5B%5C%22filter%5C%22%5D%22%7D" name="{{cronapi.screen.changeView}}">
+      <arg name="filter"/>
+    </mutation>
+  </block>
+</blockly>
